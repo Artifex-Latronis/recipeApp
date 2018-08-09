@@ -16,4 +16,15 @@ export class ShoppingListService {
     this.ingredients.push(ingredient);
     this.ingredientChanged.emit(this.ingredients.slice());
   }
+
+  addIngredients(ingredients: Ingredient[]) {
+    // viable option, but invokes a lot of events...
+    // for (const ingredient of ingredients) {
+    //   this.addIngredient(ingredient);
+    // }
+
+    // spread operator(...) - turn an array of elements into a list of elements
+    this.ingredients.push(...ingredients);
+    this.ingredientChanged.emit(this.ingredients.slice());
+  }
 }
