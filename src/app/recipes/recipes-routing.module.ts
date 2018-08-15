@@ -24,6 +24,7 @@ const recipesRoutes: Routes = [
     CommonModule,
     RouterModule.forChild(recipesRoutes)
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AuthGuardService]
 })
 export class RecipesRoutingModule { }
