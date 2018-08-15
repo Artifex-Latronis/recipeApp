@@ -10,7 +10,7 @@ import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 
 const recipesRoutes: Routes = [
   {
-    path: 'recipes', component: RecipesComponent, children: [
+    path: '', component: RecipesComponent, children: [ // removed path, because lazy loading puts us here already.
       { path: '', component: RecipeStartComponent },
       { path: 'new', component: RecipeEditComponent, canActivate: [AuthGuardService] }, // order matters, the route below is a wildcard
       { path: ':id', component: RecipeDetailComponent },
