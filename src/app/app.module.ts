@@ -9,6 +9,8 @@ import { ShoppingListModule } from './shopping-list/shopping-list.module';
 import { AuthModule } from './auth/auth.module';
 import { CoreModule } from './core/core.module';
 
+// adding note for git testing
+
 @NgModule({
   declarations: [
     AppComponent
